@@ -1,0 +1,251 @@
+/* General Styling */
+
+body {
+
+    font-family: 'Arial', sans-serif;
+
+    background: linear-gradient(45deg, #6a11cb, #2575fc);  /* Gradient Background */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    flex-direction: column;
+
+    color: #fff;
+
+    overflow: hidden;
+
+    text-align: center;
+
+}
+
+/* Title Styling */
+
+h1 {
+
+    font-size: 36px;
+
+    margin-bottom: 20px;
+
+    color: #fff;
+
+}
+
+/* Tic-Tac-Toe Grid */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 100px);
+
+    grid-template-rows: repeat(3, 100px);
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    border: 5px solid #fff;
+
+    border-radius: 10px;
+
+}
+
+/* Cell Style */
+
+.cell {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100px;
+
+    height: 100px;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    background-color: rgba(255, 255, 255, 0.2);
+
+    border: 2px solid #fff;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s ease, background-color 0.3s ease;
+
+}
+
+.cell:hover {
+
+    background-color: rgba(255, 255, 255, 0.4);
+
+    transform: scale(1.1); /* Slight zoom effect on hover */
+
+}
+
+/* Style for X and O */
+
+.x {
+
+    color: #ff4081;  /* Bright Pink for X */
+
+    text-shadow: 2px 2px 10px rgba(255, 20, 147, 0.5); /* Glow effect */
+
+}
+
+.o {
+
+    color: #00e5ff;  /* Bright Blue for O */
+
+    text-shadow: 2px 2px 10px rgba(0, 183, 255, 0.5); /* Glow effect */
+
+}
+
+/* Popup */
+
+.popup {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    color: #fff;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    display: none;
+
+    z-index: 10;
+
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.popup p {
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+
+}
+
+/* Enhanced Retry Button Styling */
+
+.popup button,
+
+footer button {
+
+    background: linear-gradient(135deg, #ff5733, #ff1c65); /* Vibrant Red-Orange Gradient */
+
+    color: #fff;
+
+    border: none;
+
+    padding: 12px 25px; /* Adjusted padding for better proportion */
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+
+    margin-top: 15px;
+
+}
+
+.popup button:hover,
+
+footer button:hover {
+
+    transform: scale(1.1);
+
+    background: linear-gradient(135deg, #ff1c65, #ff5733); /* Reverse gradient on hover */
+
+    box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.4);
+
+}
+
+.popup button:active,
+
+footer button:active {
+
+    transform: scale(1.05);
+
+}
+
+/* Footer Styling */
+
+footer {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    font-size: 18px;
+
+    color: #fff;
+
+    opacity: 0.7;
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+footer p {
+
+    margin: 0;
+
+}
+
+/* Responsive Design for Smaller Screens */
+
+@media (max-width: 600px) {
+
+    .grid {
+
+        grid-template-columns: repeat(3, 80px);
+
+        grid-template-rows: repeat(3, 80px);
+
+    }
+
+    .cell {
+
+        width: 80px;
+
+        height: 80px;
+
+        font-size: 30px;
+
+    }
+
+}
